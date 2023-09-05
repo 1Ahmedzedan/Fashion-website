@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Fashion-website/static/css/main.fd8394c5.css",
+    "main.js": "/Fashion-website/static/js/main.83216b98.js",
+    "index.html": "/Fashion-website/index.html",
+    "main.fd8394c5.css.map": "/Fashion-website/static/css/main.fd8394c5.css.map",
+    "main.83216b98.js.map": "/Fashion-website/static/js/main.83216b98.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fd8394c5.css",
+    "static/js/main.83216b98.js"
+  ]
+}
