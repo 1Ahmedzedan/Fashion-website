@@ -1,25 +1,29 @@
+import { useState } from "react";
+
 export default function App() {
+  const [activeTap , setActiveTap] = useState(1) ; 
+  const [activeBtn , setActiveBtn] = useState(1) ; 
   return (
     <div className="app">
-      <Header/>
+      <Header onClickTap={setActiveTap} activeTap={activeTap} onClickBtn={setActiveBtn} activeBtn={activeBtn}/>
       <Cycle/>
     </div>
   );
 }
 
-function Header(){
+function Header({onClickTap , activeTap , onClickBtn , activeBtn}){
   return(
     <nav>
       <h1>LOGO</h1>
       <ul>
-        <li className="active">home</li>
-        <li>summer collection</li>
-        <li>categories</li>
-        <li>about us</li>
+        <li className={activeTap===1?"active":""} onClick={()=>onClickTap((e)=>1)}>home</li>
+        <li className={activeTap===2?"active":""} onClick={()=>onClickTap((e)=>2)}>summer collection</li>
+        <li className={activeTap===3?"active":""} onClick={()=>onClickTap((e)=>3)}>categories</li>
+        <li className={activeTap===4?"active":""} onClick={()=>onClickTap((e)=>4)}>about us</li>
       </ul>
       <div className="buttons">
-        <button className="active">login</button>
-        <button>sign up</button>
+        <button className={activeBtn===1?"active":""} onClick={()=>onClickBtn((e)=>1)}>login</button>
+        <button className={activeBtn===2?"active":""} onClick={()=>onClickBtn((e)=>2)}>sign up</button>
       </div>
     </nav>
   );
